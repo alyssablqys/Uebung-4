@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+void main()
+{
+	int Auswahl;
+	do
+	{
+		cout << "<1>" << endl;
+		cout << "<2>" << endl;
+		cout << "<0>" << endl;
+		cout << "Wahlen Sie deine Option:" << endl;
+		cin >> Auswahl;
+
+		switch (Auswahl)
+		{
+		case 1:
+			cout << "Option 1" << "\n";
+			break;
+		case 2:
+			cout << "Option 2" << "\n";
+			break;
+		default:
+			cout << "Fehler bei der Eingabe" << "\n";
+			break;
+		}
+	} while (Auswahl != 0);
+}
