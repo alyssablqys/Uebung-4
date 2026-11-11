@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+
+int Option1()
+{
+	cout << "Option 1" << "\n";
+	return 0;
+}
+
+int Option2()
+{
+	cout << "Option 2" << "\n";
+	return 0;
+}
+
+int Option0()
+{
+	cout << "Fehler bei der Eingabe" << "\n";
+	return 0;
+}
+
+void main()
+{
+	int Auswahl;
+	int print;
+	do
+	{
+		cout << "<1>" << endl;
+		cout << "<2>" << endl;
+		cout << "<0>" << endl;
+		cout << "Wahlen Sie deine Option:" << endl;
+		cin >> Auswahl;
+
+		if (Auswahl == 1)
+		{
+			print = Option1();
+		}
+
+		else if (Auswahl == 2)
+		{
+			print = Option2();
+		}
+
+		else 
+		{
+			print = Option0();
+		}
+		
+	} while (Auswahl != 0);
+}
