@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+float option1(int z)
+{
+	float x = 1;
+	for(int i=1;i<=10;i++)
+	{
+		x = (x + (z / x)) / 2;
+	} 
+	return x;
+}
+
+int option2()
+{
+	cout << "Option 2" << "\n";
+	return 0;
+}
+
+void main()
+{
+	int Auswahl;
+
+	do
+	{
+		cout << "<1> Option 1" << endl;
+		cout << "<2> Option 2" << endl;
+		cout << "<0> Programm beenden" << endl;
+		cin >> Auswahl;
+		float go;
+
+		switch (Auswahl)
+		{
+		case 1:
+		{
+			int z;
+			cout << "z=";
+			cin >> z;
+			go = option1(z);
+			cout << go << endl;
+			break;
+		}
+		case 2:
+		{
+			go = option2();
+			break;
+		}
+		case 0:
+		{
+			cout << "Programm beenden" << endl;
+			break;
+		}
+		default:
+		{
+			cout << "Fehler bei der Eingabe" << endl;
+		}
+		}
+	} while (Auswahl != 0);
+}
